@@ -55,12 +55,10 @@
 <!-- =================  ABOUT INTRO (SECTION 1) ================= -->
 <section class="about-intro">
     <div class="about-container">
-
-        <!-- LEFT CONTENT: ORIGINAL ABOUT TEXT -->
         <div class="about-text">
-            <span class="about-subtitle">Société Holding</span>
-            <h2 class="about-title">RMGC HOLDING</h2>
-            <p class="about-description">
+            <span class="about-subtitle reveal-left">Société Holding</span>
+            <h2 class="about-title reveal-left">RMGC HOLDING</h2>
+            <p class="about-description reveal">
                 RMGC Spa Holding est une société d’investissement, de gestion et d’acquisition d’actifs courants et non courants,
                 ainsi que de participation diversifiée dans les domaines de service, de production et du négoce. <br>
                 Elle est également active dans les domaines de l’intermédiation boursière, des placements financiers pour 
@@ -68,22 +66,18 @@
                 ses filiales.
             </p>
         </div>
-
-        <!-- RIGHT BIG TITLE -->
-        <div class="about-big-title">
+        <div class="about-big-title reveal-right">
             <h1>Qui<br><span>sommes-</span>nous ?</h1>
         </div>
 
     </div>
 </section>
 
-<!-- =================  WHITE SECTION WITH VIDEO + CHART + PARTNERS (SECTION 2) ================= -->
+<!-- ================= next about SECTION  ================= -->
 <section class="white-section">
 
   <div class="video-chart-wrapper">
-
-    <!-- LEFT TEXT PARAGRAPH -->
-    <div class="video-chart-text">
+    <div class="video-chart-text reveal">
       <p>
         RMGC Holding offre des services financiers et d'investissement de premier plan. 
         Nous accompagnons nos clients dans la gestion de portefeuilles, le trading boursier, 
@@ -91,26 +85,19 @@
         Découvrez comment nous optimisons vos investissements et développons votre patrimoine.
       </p>
     </div>
-
-    <!-- VIDEO -->
-    <div class="video-box">
+    <div class="video-box reveal-right">
       <video src="teamwork.mp4" autoplay muted loop></video>
     </div>
-
-    <!-- CHART -->
-    <div class="chart-box">
+    <div class="chart-box ">
       <canvas id="myChart"></canvas>
     </div>
-
   </div>
-
-  <!-- Partners Logos -->
   <div class="partners-logos">
-    <img src="basa_logo-removebg-preview.png" alt="Partner 1">
-    <img src="invest.png" alt="Partner 2">
-    <img src="logo3.png" alt="Partner 3">
-    <img src="logo4.png" alt="Partner 4">
-    <img src="logo5.png" alt="Partner 5">
+    <img src="basa_logo-removebg-preview.png" alt="Partner 1"class="reveal">
+    <img src="invest.png" alt="Partner 2" class="reveal">
+    <img src="logo3.png" alt="Partner 3" class="reveal">
+    <img src="logo4.png" alt="Partner 4" class="reveal">
+    <img src="logo5.png" alt="Partner 5" class="reveal">
   </div>
 
 </section>
@@ -173,7 +160,6 @@ new Chart(ctx, {
 
     <div class="timeline-wrapper">
 
-        <!-- TOP ROW -->
         <div class="timeline-row top-row">
             <div class="timeline-card" id="card1">
     <img src="rmgcadvice.png" alt="1996 RMGC" class="timeline-img">
@@ -189,7 +175,6 @@ new Chart(ctx, {
 </div>
         </div>
 
-        <!-- LINE -->
         <div class="timeline-line">
             <div class="timeline-progress"></div>
             <span class="timeline-dot" style="left:5%"></span>
@@ -198,7 +183,6 @@ new Chart(ctx, {
             <span class="timeline-dot" style="left:100%"></span>
         </div>
 
-        <!-- BOTTOM ROW -->
         <div class="timeline-row bottom-row">
            <div class="timeline-card" id="card3">
     <img src="RMGCHolding(2).png" alt="2022 RMGC" class="timeline-img">
@@ -227,21 +211,21 @@ new Chart(ctx, {
         </div>
 
         <div class="grid-3">
-            <div class="team-card">
+            <div class="team-card reveal-right">
                 <div class="team-img-wrapper">
                     <img src="team1.jpg" alt="CEO">
                 </div>
                 <h4>Mohamed Benali</h4>
                 <p>Président Directeur Général</p>
             </div>
-            <div class="team-card">
+            <div class="team-card reveal-left">
                 <div class="team-img-wrapper">
                     <img src="team2.jpg" alt="CFO">
                 </div>
                 <h4>Amel Boukhalfa</h4>
                 <p>Directrice Financière</p>
             </div>
-            <div class="team-card">
+            <div class="team-card reveal-right">
                 <div class="team-img-wrapper">
                     <img src="team3.jpg" alt="COO">
                 </div>
@@ -321,8 +305,6 @@ new Chart(ctx, {
             </div>
         </div>
     </div>
-
-    <!-- Footer bottom -->
      <div class="footer-bottom">
         © Copyright 2026 BY  RMGC HOLDING <br> 
         Agrée par la Commission d’organisation et de surveillance des opérations de Bourse

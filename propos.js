@@ -1,3 +1,24 @@
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+    if(navLinks.style.right === "0px"){
+        navLinks.style.right = "-300px";
+        overlay.classList.remove("active");
+    } else {
+        navLinks.style.right = "0px";
+        overlay.classList.add("active");
+    }
+}
+
+function closeMenu() {
+    document.querySelector('.nav-links').style.right = "-300px";
+    document.querySelector('.overlay').classList.remove("active");
+}
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const section = document.querySelector(".history-horizontal");
     const topCards = document.querySelectorAll(".top-row .timeline-card");
@@ -18,17 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             const isMobile = window.innerWidth <= 768;
 
-            // تحديث الخط
+       
             if (isMobile) {
                 progress.style.height = step.percentMobile;
             } else {
                 progress.style.width = step.percent + "%";
             }
 
-            // إظهار البطاقة
             if (step.card) step.card.classList.add("active");
 
-            // تفعيل النقطة
+            
             const dotIndex = sequence.indexOf(step);
             if (dots[dotIndex]) dots[dotIndex].classList.add("active");
         }, delay);
@@ -36,10 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAnimation() {
         sequence.forEach((step, i) => {
-            animateStep(step, i * 1200); // كل بطاقة بعد 2.2 ثانية من السابقة
+            animateStep(step, i * 1200); 
         });
 
-        // إظهار عنوان القسم مرة واحدة
+    
         section.querySelectorAll("h2").forEach(h =>
             h.classList.add("show-line")
         );
@@ -55,4 +75,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.3 });
 
     observer.observe(section);
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const revealElements = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right"
+  );
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); 
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  revealElements.forEach((el, index) => {
+    el.style.transitionDelay = `${index * 120}ms`; 
+    observer.observe(el);
+  });
+
 });

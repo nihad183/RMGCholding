@@ -87,18 +87,18 @@ articles.forEach(article => {
 
         modalImg.src = img;
         modalTitle.innerText = title;
-        modalText.innerText = text; // المحتوى قابل للتعديل إذا أحببت
+        modalText.innerText = text; 
 
         modal.style.display = "block";
     });
 });
 
-// إغلاق Modal عند الضغط على زر الإغلاق
+
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
-// إغلاق Modal عند الضغط خارج المحتوى
+
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.style.display = "none";
