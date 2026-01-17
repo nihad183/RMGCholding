@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - RMGC Holding</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar">
+    <div class="top-logo">
+        <img src="RMGCHolding(2).png" alt="RMGC Holding">
+    </div>
+
+    <div class="top-info">
+        <span><i class="fa fa-envelope"></i> info@rmgcholding-dz.com</span>
+        <span><i class="fa fa-location-dot"></i> 02, Boulevard Mohamed V, Alger centre</span>
+    </div>
+</div>  
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo-mobile">
+        <img src="RMGCHolding(2).png" alt="RMGC Holding">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<div class="overlay" onclick="closeMenu()"></div>
+
+<script>
+
+//menu phone
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const overlay = document.querySelector('.overlay');
+    if(navLinks.style.right === "0px"){
+        navLinks.style.right = "-300px";
+        overlay.classList.remove("active");
+    } else {
+        navLinks.style.right = "0px";
+        overlay.classList.add("active");
+    }
+}
+
+function closeMenu() {
+    document.querySelector('.nav-links').style.right = "-300px";
+    document.querySelector('.overlay').classList.remove("active");
+}
+
+
+</script>
+
+<!-- ================= HERO ================= -->
+<section class="hero-services">
+    <div class="services-info">
+        <div class="service-item">
+            <i class="fa fa-headset"></i>
+            <div class="service-text">
+                <h3>Service client</h3>
+                <p>Nous sommes joignable <br> au 021 78 23 77</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <i class="fa fa-clock"></i>
+            <div class="service-text">
+                <h3>Nos horaires</h3>
+                <p>Lun-Ven : 9h-17h<br>Sam : 9h - 16h</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <i class="fa fa-building"></i>
+            <div class="service-text">
+                <h3>Siège social</h3>
+                <p>02, Boulevard Mohamed V, <br> Alger centre 16000</p>
+            </div>
+        </div>
+        <div class="service-item">
+    <i class="fa fa-briefcase"></i>
+    <div class="service-text">
+        <h3>Nos services</h3>
+        <div class="service-tags">
+            <span>Levée de fonds</span><br>
+            <span>Conseil & acquisition</span><br>
+            <span>Investissement</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+<!-- ================= Section Title ================= -->
+<section class="section-title">
+    <h2>Services</h2>
+</section>
+
+
+<!-- ================= hero-services ================= -->
+
+<section class="hero-services-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content-banner">
+        <p>Des solutions financières sur mesure pour accompagner vos projets et investissements</p>
+        <a href="#contact" class="btn-contact">Contactez-nous</a>
+    </div>
+</section>
+
+<!-- ================= Section Blanc Vide ================= -->
+<section class="section-white"></section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer >
+   <div class="footer">
+        <div class="footer-col logo-col">
+            <img src="RMGCHolding(2).png" alt="RMGC Holding">
+            <p>Intermédiation en opérations de bourse</p>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Liens</h4>
+            <a href="index.html">Accueil</a>
+            <a href="propos.html">À propos</a>
+            <a href="services.html">Services</a>
+            <a href="#">Actualités</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-col contact-col">
+            <h4>Contact</h4>
+            <p><i class="fa fa-location-dot"></i> 02, Boulevard Mohamed V, Alger centre, à côté de Air Algérie</p>
+            <p><i class="fa fa-envelope"></i> info@rmgcholding-dz.com</p>
+            <p><i class="fa fa-phone"></i>       021 78 23 77</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-col gallery-col">
+            <h4>Gallery</h4>
+            <div class="footer-gallery">
+                <img src="RMGCHERO.png" alt="Gallery 1">
+                <img src="BOURSE-dalger.jpg" alt="Gallery 2">
+                <img src="background.jpg" alt="Gallery 3">
+                <img src="RMGCHolding(2).png" alt="Gallery 4">
+                <img src="invest.png" alt="Gallery 5">
+            </div>
+        </div>
+    </div>
+     <div class="footer-bottom">
+        © Copyright 2026 BY  RMGC HOLDING <br> 
+        Agrée par la Commission d’organisation et de surveillance des opérations de Bourse
+    </div>
+</footer>
+
+
+</body>
+</html>
