@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>À propos - RMGC Holding</title>
+    <link rel="stylesheet" href="propos.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar">
+    <div class="top-logo">
+        <img src="RMGCHolding(2).png" alt="RMGC Holding">
+    </div>
+
+    <div class="top-info">
+        <span><i class="fa fa-envelope"></i> info@rmgcholding-dz.com</span>
+        <span><i class="fa fa-location-dot"></i> 02, Boulevard Mohamed V, Alger centre</span>
+    </div>
+</div>  
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+    <div class="logo-mobile">
+        <img src="RMGCHolding(2).png" alt="RMGC Holding">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="propos.html">À propos</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Filiales</a></li>
+        <li><a href="#">Actualités</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<div class="overlay" onclick="closeMenu()"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero-about">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>À propos </h1>
+        <p>Découvrez notre vision, notre mission et nos valeurs</p>
+    </div>
+</section>
+
+<!-- =================  ABOUT INTRO (SECTION 1) ================= -->
+<section class="about-intro">
+    <div class="about-container">
+
+        <!-- LEFT CONTENT: ORIGINAL ABOUT TEXT -->
+        <div class="about-text">
+            <span class="about-subtitle">Société Holding</span>
+            <h2 class="about-title">RMGC HOLDING</h2>
+            <p class="about-description">
+                RMGC Spa Holding est une société d’investissement, de gestion et d’acquisition d’actifs courants et non courants,
+                ainsi que de participation diversifiée dans les domaines de service, de production et du négoce. <br>
+                Elle est également active dans les domaines de l’intermédiation boursière, des placements financiers pour 
+                compte et de la formation des élites. RMGC Spa Holding gère et contrôle les actifs d’une société mère et de 
+                ses filiales.
+            </p>
+        </div>
+
+        <!-- RIGHT BIG TITLE -->
+        <div class="about-big-title">
+            <h1>Qui<br><span>sommes-</span>nous ?</h1>
+        </div>
+
+    </div>
+</section>
+
+<!-- =================  WHITE SECTION WITH VIDEO + CHART + PARTNERS (SECTION 2) ================= -->
+<section class="white-section">
+
+  <div class="video-chart-wrapper">
+
+    <!-- LEFT TEXT PARAGRAPH -->
+    <div class="video-chart-text">
+      <p>
+        RMGC Holding offre des services financiers et d'investissement de premier plan. 
+        Nous accompagnons nos clients dans la gestion de portefeuilles, le trading boursier, 
+        la structuration de capital et les conseils financiers stratégiques. 
+        Découvrez comment nous optimisons vos investissements et développons votre patrimoine.
+      </p>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-box">
+      <video src="teamwork.mp4" autoplay muted loop></video>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-box">
+      <canvas id="myChart"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Partners Logos -->
+  <div class="partners-logos">
+    <img src="basa_logo-removebg-preview.png" alt="Partner 1">
+    <img src="invest.png" alt="Partner 2">
+    <img src="logo3.png" alt="Partner 3">
+    <img src="logo4.png" alt="Partner 4">
+    <img src="logo5.png" alt="Partner 5">
+  </div>
+
+</section>
+
+<!-- =================  CHART.JS SCRIPT ================= -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Trading', 'Portfolio Mgmt', 'Capital Structuring', 'Private Inv.', 'Advisory'], 
+        datasets: [{
+            label: 'Percentage of Services (%)',
+            data: [35, 25, 15, 10, 15],
+            backgroundColor: [
+                '#1b345c',
+                '#0b3a3f',
+                '#0077cc',
+                '#ff9900',
+                '#0066ff'
+            ],
+            borderRadius: 5
+        }]
+    },
+    options: {
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        return context.parsed.y + '%';
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: { callback: value => value + '%' }
+            },
+            x: {
+                grid: { display: false }
+            }
+        },
+        maintainAspectRatio: false
+    }
+});
+</script>
+
+
+<!-- ================= HISTORY TIMELINE ================= -->
+<section class="history-horizontal">
+    <div class="history-header">
+    <span class="history-subtitle">Notre parcours</span>
+    <h2 class="history-title">RMGC Holding SPA</h2>
+</div>
+
+
+    <div class="timeline-wrapper">
+
+        <!-- TOP ROW -->
+        <div class="timeline-row top-row">
+            <div class="timeline-card" id="card1">
+    <img src="rmgcadvice.png" alt="1996 RMGC" class="timeline-img">
+    <span class="date">1996</span>
+    <h4>Création de la SARL RMGC</h4>
+    <p>Expertise en ingénierie financière, solutions sur mesure pour optimiser le capital et réaliser des opérations complexes avec succès.</p>
+</div>
+            <div class="timeline-card"id="card2">
+    <img src="invest.png" alt="2022 Invest market" class="timeline-img">
+    <span class="date">2022</span>
+    <h4>Création de Invest Market</h4>
+    <p>Invest Market, filiale de RMGC Spa Holding, est un Intermédiaire en Opérations de Bourse (IOB) agréé par la Commission d’Organisation et de Surveillance des Opérations de Bourse (COSOB)</p>
+</div>
+        </div>
+
+        <!-- LINE -->
+        <div class="timeline-line">
+            <div class="timeline-progress"></div>
+            <span class="timeline-dot" style="left:5%"></span>
+            <span class="timeline-dot" style="left:40%"></span>
+            <span class="timeline-dot" style="left:70%"></span>
+            <span class="timeline-dot" style="left:100%"></span>
+        </div>
+
+        <!-- BOTTOM ROW -->
+        <div class="timeline-row bottom-row">
+           <div class="timeline-card" id="card3">
+    <img src="RMGCHolding(2).png" alt="2022 RMGC" class="timeline-img">
+    <span class="date">2022</span>
+    <h4>Transformation en SPA</h4>
+    <p>RMGC, pionnière en ingénierie financière, devient RMGC Holding avec plusieurs filiales spécialisées dans divers secteurs.</p>
+</div>
+           <div class="timeline-card" id="card4">
+    <img src="cosob.png" alt="2024 COSOB" class="timeline-img">
+    <span class="date">2024</span>
+    <h4>Obtention de l’agrément IOB</h4>
+    <p>En 2024, Invest Market a franchi une étape majeure en obtenant l'agrément de l'Intermédiaire en Opérations de Bourse (IOB) par la Commission d’Organisation et de Surveillance des Opérations de Bourse (COSOB).</p>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="team">
+    <div class="container">
+        <div class="team-header">
+            <span class="team-subtitle">Notre Équipe</span>
+            <h2 class="team-title">L'Equipe Professionnelle de RMGC Holding</h2>
+        </div>
+
+        <div class="grid-3">
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="team1.jpg" alt="CEO">
+                </div>
+                <h4>Mohamed Benali</h4>
+                <p>Président Directeur Général</p>
+            </div>
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="team2.jpg" alt="CFO">
+                </div>
+                <h4>Amel Boukhalfa</h4>
+                <p>Directrice Financière</p>
+            </div>
+            <div class="team-card">
+                <div class="team-img-wrapper">
+                    <img src="team3.jpg" alt="COO">
+                </div>
+                <h4>Karim Haddad</h4>
+                <p>Directeur des Opérations</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--============= About team ===============-->
+<section class="about-team">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="about-content">
+            <h2>A propos de notre équipe</h2>
+            <p>Notre Engagement envers la Qualité Chez Invest Market, la qualité est notre priorité. <br>
+             Nous nous engageons à vous offrir des services de haut niveau, <br>
+              basés sur :</p>
+        </div>
+
+        <div class="cards-row">
+            <div class="about-card">
+                <i class="fa-solid fa-user-tie fa-2x"></i>
+                <h4>Expertise Professionnelle</h4>
+                <p>Notre équipe est composée d'experts chevronnés, prêts à répondre à vos besoins les plus spécifiques.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-handshake fa-2x"></i>
+                <h4>Transparence Totale</h4>
+                <p>Vous pouvez compter sur nous pour une communication claire et honnête à chaque étape de notre collaboration.</p>
+            </div>
+            <div class="about-card">
+                <i class="fa-solid fa-shield fa-2x"></i>
+                <h4>Sécurité et Confidentialité</h4>
+                <p>Vos finances et informations sont traitées avec la plus grande confidentialité et sécurité.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer >
+   <div class="footer">
+        <div class="footer-col logo-col">
+            <img src="RMGCHolding(2).png" alt="RMGC Holding">
+            <p>Intermédiation en opérations de bourse</p>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Liens</h4>
+            <a href="#">Accueil</a>
+            <a href="#">À propos</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-col contact-col">
+            <h4>Contact</h4>
+            <p><i class="fa fa-location-dot"></i> 02, Boulevard Mohamed V, Alger centre, à côté de Air Algérie</p>
+            <p><i class="fa fa-envelope"></i> info@rmgcholding-dz.com</p>
+            <p><i class="fa fa-phone"></i>       021 78 23 77</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-col gallery-col">
+            <h4>Gallery</h4>
+            <div class="footer-gallery">
+                <img src="RMGCHERO.png" alt="Gallery 1">
+                <img src="BOURSE-dalger.jpg" alt="Gallery 2">
+                <img src="background.jpg" alt="Gallery 3">
+                <img src="RMGCHolding(2).png" alt="Gallery 4">
+                <img src="invest.png" alt="Gallery 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer bottom -->
+     <div class="footer-bottom">
+        © Copyright 2026 BY  RMGC HOLDING <br> 
+        Agrée par la Commission d’organisation et de surveillance des opérations de Bourse
+    </div>
+</footer>
+
+<script src="propos.js"></script>
+
+</body>
+</html>

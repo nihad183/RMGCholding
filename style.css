@@ -537,7 +537,7 @@ body {
 @media screen and (max-width: 768px) {
 
     .why-us h2 {
-        font-size: 24px;       
+        font-size: 20px;       
         white-space: nowrap;   
         text-align: center;
     }
@@ -550,11 +550,11 @@ body {
     }
 
     .typing-text {
-        font-size: 18px;      
+        font-size: 16px;      
         height: auto;         
     }
     .text {
-        font-size: 18px;       
+        font-size: 16px;       
     }
 }
 
