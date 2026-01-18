@@ -196,17 +196,19 @@ body {
 }
 @media screen and (max-width: 768px) {
     .services-info {
+        display: flex;
         flex-wrap: wrap;
-        gap: 15px;     
+        gap: 15px;
         justify-content: center;
     }
 
     .service-item {
-        flex: 0 0 48%; 
-        max-width: none; 
+        width: calc(50% - 15px); 
+        max-width: none;
         box-sizing: border-box;
     }
 }
+
 
 /* ================= Title ================= */
 .section-title {
